@@ -8,14 +8,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 public class MainPage extends AppCompatActivity {
-    private Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_page);
-        button = findViewById(R.id.AppButton);
+        FloatingActionButton button = findViewById(R.id.AppButton);
         button.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){

@@ -39,7 +39,7 @@
                 android:paddingTop="5dp"
                 android:paddingRight="0dp"
                 android:paddingBottom="0dp"
-                android:translationY="-60dp" />
+                android:translationY="-80dp" />
 
 
         </LinearLayout>
@@ -47,7 +47,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="61dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:translationY="-20dp">
 
             <Button
                 android:id="@+id/numberOne"
@@ -94,7 +95,8 @@
             android:layout_width="match_parent"
             android:layout_height="65dp"
             android:layout_weight="0"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:translationY="-20dp">
 
             <Button
                 android:id="@+id/numberFour"
@@ -142,7 +144,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="61dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:translationY="-20dp">
 
             <Button
                 android:id="@+id/numberSeven"
@@ -190,7 +193,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="66dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:translationY="-20dp">
 
             <Button
                 android:id="@+id/asterixKey"
@@ -238,9 +242,10 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="858dp"
+        android:layout_width="wrap_content"
         android:layout_height="96dp"
         android:orientation="horizontal"
+        android:translationY="-50dp"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="-13dp"
         tools:layout_editor_absoluteY="368dp">
@@ -248,9 +253,9 @@
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/floatingActionButton3"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:clickable="true"
-            android:translationX="500dp"
+            android:translationX="80dp"
             app:backgroundTint="@color/white"
             app:srcCompat="@android:drawable/ic_input_delete" />
 
@@ -261,7 +266,7 @@
             android:layout_marginEnd="32dp"
             android:layout_marginRight="32dp"
             android:clickable="true"
-            android:translationX="365dp"
+            android:translationX="-40dp"
             app:backgroundTint="@android:color/holo_green_light"
             app:srcCompat="@android:drawable/sym_action_call" />
     </LinearLayout>
