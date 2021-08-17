@@ -225,7 +225,7 @@
             app:srcCompat="@android:drawable/sym_action_call" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/floatingActionButton2"
+            android:id="@+id/DeleteNumber_"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:clickable="true"

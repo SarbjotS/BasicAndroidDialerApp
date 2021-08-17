@@ -11,6 +11,7 @@ import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -23,7 +24,7 @@ import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
     //private int or = getResources().getConfiguration().orientation; not necessary
-    private int Request = 1;
+    private static final int Request = 1;
     TextView phoneNumber;
     Button btn1, btn2, btn3,btn4,btn5,btn6,btn7,btn8,btn9, btnAst,btn0,btnHash;
     FloatingActionButton btnDel, call_Button;
@@ -46,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         btnAst = findViewById(R.id.asterixKey);
         btn0 = findViewById(R.id.numberZero);
         btnHash = findViewById(R.id.hashKey_);
-        btnDel = findViewById(R.id.DeleteNumber);
+        btnDel = findViewById(R.id.DeleteNumber_);
         phoneNumber = findViewById(R.id.NumberAppearHere);
 
         btn1.setOnClickListener(new View.OnClickListener() {
@@ -133,14 +134,32 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        btnDel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String temp = phoneNumber.getText().toString();
+                if (!TextUtils.isEmpty(temp))
+                    temp = temp.substring(0, temp.length() - 1);
+                phoneNumber.setText(temp);
+            }
+        });
+
 
         call_Button = findViewById(R.id.callButton);
-       /* call_Button.setOnClickListener(new View.OnClickListener() {
+        call_Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 PhoneCall();
             }
         });
+    }
+        //private void PhoneCall(){
+         //   String number = phoneNumber.getText().toString();
+         //   String calling = "tel: "+ number;
+          //  if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED){
+           //     startActivity(new Intent(Intent.ACTION_CALL, Uri.parse(calling)));
+
+        /*
         if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
             setContentView(R.layout.activity_main);
 
@@ -157,7 +176,7 @@ public class MainActivity extends AppCompatActivity {
         //     setContentView(R.layout.appinlandscape);
         // }
     }
-
+    */
     private void PhoneCall() {
         String number = phoneNumber.getText().toString();
         if (number.trim().length() > 0) {
@@ -167,11 +186,12 @@ public class MainActivity extends AppCompatActivity {
                 String telPart = "tel: " + number;
                 startActivity(new Intent(Intent.ACTION_CALL, Uri.parse(telPart)));
             }
-            //else{
-            // Toast.makeText(MainActivity.this, " ",)
-            //}
+        }else{
+                Toast.makeText(MainActivity.this, "Enter phone number ", Toast.LENGTH_SHORT).show();
+
         }
     }
+
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
@@ -181,6 +201,6 @@ public class MainActivity extends AppCompatActivity {
                 PhoneCall();
             }
         }
-    }*/
     }
+
 }
