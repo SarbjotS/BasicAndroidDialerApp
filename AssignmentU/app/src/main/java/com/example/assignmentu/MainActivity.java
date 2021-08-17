@@ -19,10 +19,12 @@ import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import org.w3c.dom.Text;
+
 public class MainActivity extends AppCompatActivity {
     //private int or = getResources().getConfiguration().orientation; not necessary
     private int Request = 1;
-    private EditText phoneNumber;
+    TextView phoneNumber;
     Button btn1, btn2, btn3,btn4,btn5,btn6,btn7,btn8,btn9, btnAst,btn0,btnHash;
     FloatingActionButton btnDel, call_Button;
 
@@ -50,90 +52,90 @@ public class MainActivity extends AppCompatActivity {
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                phoneNumber.setText(phoneNumber.getText()+"1");
+                phoneNumber.setText(phoneNumber.getText().toString() + "1");
 
             }
         });
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                phoneNumber.setText(phoneNumber.getText()+"2");
+                phoneNumber.setText(phoneNumber.getText().toString() + "2");
 
             }
         });
         btn3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                phoneNumber.setText(phoneNumber.getText()+"3");
+                phoneNumber.setText(phoneNumber.getText() + "3");
 
             }
         });
         btn4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                phoneNumber.setText(phoneNumber.getText()+"4");
+                phoneNumber.setText(phoneNumber.getText() + "4");
 
             }
         });
         btn5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                phoneNumber.setText(phoneNumber.getText()+"5");
+                phoneNumber.setText(phoneNumber.getText() + "5");
 
             }
         });
         btn6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                phoneNumber.setText(phoneNumber.getText()+"6");
+                phoneNumber.setText(phoneNumber.getText() + "6");
 
             }
         });
         btn7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                phoneNumber.setText(phoneNumber.getText()+"7");
+                phoneNumber.setText(phoneNumber.getText() + "7");
 
             }
         });
         btn8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                phoneNumber.setText(phoneNumber.getText()+"8");
+                phoneNumber.setText(phoneNumber.getText() + "8");
 
             }
         });
         btn9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                phoneNumber.setText(phoneNumber.getText()+"9");
+                phoneNumber.setText(phoneNumber.getText() + "9");
 
             }
         });
         btn0.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                phoneNumber.setText(phoneNumber.getText()+"0");
+                phoneNumber.setText(phoneNumber.getText() + "0");
 
             }
         });
         btnHash.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                phoneNumber.setText(phoneNumber.getText()+"#");
+                phoneNumber.setText(phoneNumber.getText() + "#");
 
             }
         });
         btnAst.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                phoneNumber.setText(phoneNumber.getText()+"*");
+                phoneNumber.setText(phoneNumber.getText() + "*");
 
             }
         });
 
         call_Button = findViewById(R.id.callButton);
-        call_Button.setOnClickListener(new View.OnClickListener() {
+       /* call_Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 PhoneCall();
@@ -179,5 +181,6 @@ public class MainActivity extends AppCompatActivity {
                 PhoneCall();
             }
         }
+    }*/
     }
 }

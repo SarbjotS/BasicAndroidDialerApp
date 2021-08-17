@@ -10,22 +10,20 @@
     android:orientation="vertical">
 
 
-    <EditText
+    <TextView
         android:id="@+id/NumberAppearHere"
         android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:paddingLeft="165dp"
-        android:paddingTop="25dp"
-        android:text="test"
+        android:layout_height="232dp"
+        android:layout_weight="1"
+        android:paddingLeft="100dp"
+        android:paddingTop="150dp"
         android:textColor="@color/white"
-
-        android:translationY="60dp" />
+        android:translationY="-50dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="86dp"
-        android:orientation="horizontal"
-        android:translationY="60dp">
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/numberOne"
@@ -72,8 +70,7 @@
         android:layout_width="match_parent"
         android:layout_height="95dp"
         android:layout_weight="0"
-        android:orientation="horizontal"
-        android:translationY="60dp">
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/numberFour"
@@ -121,8 +118,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="97dp"
-        android:orientation="horizontal"
-        android:translationY="60dp">
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/numberSeven"
@@ -170,8 +166,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="117dp"
-        android:orientation="horizontal"
-        android:translationY="60dp">
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/asterixKey"
@@ -219,13 +214,12 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="66dp"
-        android:orientation="horizontal"
-        android:translationY="60dp">
+        android:orientation="horizontal">
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/callButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
             android:clickable="true"
             android:translationX="85dp"
             app:srcCompat="@android:drawable/sym_action_call" />
