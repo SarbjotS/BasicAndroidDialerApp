@@ -10,10 +10,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AssignmentU">
-        <activity
-            android:name=".MainActivity"
-            android:screenOrientation="sensor" />
-        <activity android:name=".MainPage" android:screenOrientation="user">
+        <activity android:name=".MainActivity" android:screenOrientation="sensor">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

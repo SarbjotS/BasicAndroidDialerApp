@@ -143,6 +143,14 @@ public class MainActivity extends AppCompatActivity {
                 phoneNumber.setText(temp);
             }
         });
+        //if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
+         //   setContentView(R.layout.activity_main);
+
+        //} else {
+          //  if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
+          //      setContentView(R.layout.appinlandscape);
+           // }
+        //}
 
 
         call_Button = findViewById(R.id.callButton);
@@ -152,6 +160,7 @@ public class MainActivity extends AppCompatActivity {
                 PhoneCall();
             }
         });
+
     }
         //private void PhoneCall(){
          //   String number = phoneNumber.getText().toString();
@@ -160,23 +169,18 @@ public class MainActivity extends AppCompatActivity {
            //     startActivity(new Intent(Intent.ACTION_CALL, Uri.parse(calling)));
 
         /*
-        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
-            setContentView(R.layout.activity_main);
-
-        } else {
-            if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
-                setContentView(R.layout.appinlandscape);
-            }
 
 
         }
-        //public void onConfigurationChanged(Configuration or){
-        //  super.onConfigurationChanged(or);
-        // if (or.orientation == Configuration.ORIENTATION_LANDSCAPE){
-        //     setContentView(R.layout.appinlandscape);
-        // }
+
     }
     */
+        //public void onConfigurationChanged(Configuration or) {
+          //  super.onConfigurationChanged(or);
+           // if (or.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+           //     setContentView(R.layout.appinlandscape);
+           // }
+       // }
     private void PhoneCall() {
         String number = phoneNumber.getText().toString();
         if (number.trim().length() > 0) {
