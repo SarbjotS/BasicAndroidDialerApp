@@ -24,7 +24,7 @@ import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
     //private int or = getResources().getConfiguration().orientation; not necessary
-    private static final int Request = 1;
+    private static final int Request = 1; //Used for requesting permission
     TextView phoneNumber;
     Button btn1, btn2, btn3,btn4,btn5,btn6,btn7,btn8,btn9, btnAst,btn0,btnHash;
     FloatingActionButton btnDel, call_Button;
@@ -136,15 +136,15 @@ public class MainActivity extends AppCompatActivity {
         });
         btnDel.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v) { //Put string minus last digit back into TextView
                 String temp = phoneNumber.getText().toString();
                 if (!TextUtils.isEmpty(temp))
                     temp = temp.substring(0, temp.length() - 1);
                 phoneNumber.setText(temp);
             }
         });
-        //if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
-         //   setContentView(R.layout.activity_main);
+        //if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) { //Initially thought I had to make a seperate layout for landscape
+         //   setContentView(R.layout.activity_main);                                               //Found out about layout variation and removed extra layout
 
         //} else {
           //  if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
@@ -160,30 +160,15 @@ public class MainActivity extends AppCompatActivity {
                 PhoneCall();
             }
         });
-
-    }
-        //private void PhoneCall(){
-         //   String number = phoneNumber.getText().toString();
-         //   String calling = "tel: "+ number;
-          //  if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED){
-           //     startActivity(new Intent(Intent.ACTION_CALL, Uri.parse(calling)));
-
-        /*
-
-
+        if (savedInstanceState != null) { //Will save data relating to textview in form of String (freeze text didn't work for me)
+            String temp = savedInstanceState.getString("ph");
+            phoneNumber.setText(String.valueOf(temp));
         }
-
     }
-    */
-        //public void onConfigurationChanged(Configuration or) {
-          //  super.onConfigurationChanged(or);
-           // if (or.orientation == Configuration.ORIENTATION_LANDSCAPE) {
-           //     setContentView(R.layout.appinlandscape);
-           // }
-       // }
+
     private void PhoneCall() {
         String number = phoneNumber.getText().toString();
-        if (number.trim().length() > 0) {
+        if (number.trim().length() > 0) { //request permission and call
             if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
                 ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.CALL_PHONE}, Request);
             } else {
@@ -206,5 +191,12 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString("ph", phoneNumber.getText().toString());
+    }
+
 
 }

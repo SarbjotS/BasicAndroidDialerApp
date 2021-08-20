@@ -18,8 +18,11 @@
 
         <TextView
             android:id="@+id/NumberAppearHere"
-            android:layout_width="350dp"
-            android:layout_height="120dp"
+            android:layout_width="420dp"
+            android:layout_height="74dp"
+            android:layout_weight="0"
+            android:freezesText="true"
+            android:hint="tel:"
             android:paddingLeft="90dp"
             android:paddingTop="35dp"
             android:textColor="@color/white"
@@ -30,13 +33,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:clickable="true"
-            android:translationY="50dp"
+            android:translationX="200dp"
+            android:translationY="20dp"
             app:srcCompat="@android:drawable/ic_input_delete" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="90dp"
+        android:layout_height="61dp"
         android:orientation="horizontal">
 
         <Button
@@ -47,12 +51,12 @@
             android:layout_marginRight="200dp"
             android:layout_weight="1"
             android:background="@drawable/roundbutton"
-            android:scaleX="1.25"
-            android:scaleY="1.25"
+            android:scaleX="1"
+            android:scaleY="1"
 
             android:text="1"
             android:translationX="40dp"
-            android:translationY="20dp" />
+            android:translationY="0dp" />
 
         <Button
             android:id="@+id/numberTwo"
@@ -60,11 +64,11 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/roundbutton"
-            android:scaleX="1.25"
-            android:scaleY="1.25"
+            android:scaleX="1"
+            android:scaleY="1"
             android:text="2"
             android:translationX="-115dp"
-            android:translationY="20dp" />
+            android:translationY="0dp" />
 
         <Button
             android:id="@+id/numberThree"
@@ -72,17 +76,17 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/roundbutton"
-            android:scaleX="1.25"
-            android:scaleY="1.25"
+            android:scaleX="1"
+            android:scaleY="1"
             android:text="3"
             android:translationX="-80dp"
-            android:translationY="20dp" />
+            android:translationY="0dp" />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="90dp"
+        android:layout_height="58dp"
         android:layout_weight="0"
         android:orientation="horizontal"
         android:translationY="0dp">
@@ -95,11 +99,11 @@
             android:layout_marginRight="200dp"
             android:layout_weight="1"
             android:background="@drawable/roundbutton"
-            android:scaleX="1.25"
-            android:scaleY="1.25"
+            android:scaleX="1"
+            android:scaleY="1"
             android:text="4"
             android:translationX="40dp"
-            android:translationY="20dp" />
+            android:translationY="0dp" />
 
         <Button
             android:id="@+id/numberFive"
@@ -108,12 +112,12 @@
             android:layout_weight="1"
             android:background="@drawable/roundbutton"
 
-            android:scaleX="1.25"
-            android:scaleY="1.25"
+            android:scaleX="1"
+            android:scaleY="1"
             android:text="5"
             android:translationX="-115dp"
 
-            android:translationY="20dp" />
+            android:translationY="0dp" />
 
         <Button
             android:id="@+id/numberSix"
@@ -122,17 +126,17 @@
             android:layout_weight="1"
             android:background="@drawable/roundbutton"
 
-            android:scaleX="1.25"
-            android:scaleY="1.25"
+            android:scaleX="1"
+            android:scaleY="1"
             android:text="6"
             android:translationX="-80dp"
-            android:translationY="20dp" />
+            android:translationY="0dp" />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="90dp"
+        android:layout_height="61dp"
         android:orientation="horizontal"
         android:translationY="0dp">
 
@@ -144,11 +148,11 @@
             android:layout_marginRight="200dp"
             android:layout_weight="1"
             android:background="@drawable/roundbutton"
-            android:scaleX="1.25"
-            android:scaleY="1.25"
+            android:scaleX="1"
+            android:scaleY="1"
             android:text="7"
             android:translationX="40dp"
-            android:translationY="20dp" />
+            android:translationY="0dp" />
 
         <Button
             android:id="@+id/numberEight"
@@ -157,12 +161,12 @@
             android:layout_weight="1"
             android:background="@drawable/roundbutton"
 
-            android:scaleX="1.25"
-            android:scaleY="1.25"
+            android:scaleX="1"
+            android:scaleY="1"
             android:text="8"
             android:translationX="-115dp"
 
-            android:translationY="20dp" />
+            android:translationY="0dp" />
 
         <Button
             android:id="@+id/numberNine"
@@ -171,17 +175,17 @@
             android:layout_weight="1"
             android:background="@drawable/roundbutton"
 
-            android:scaleX="1.25"
-            android:scaleY="1.25"
+            android:scaleX="1"
+            android:scaleY="1"
             android:text="9"
             android:translationX="-80dp"
-            android:translationY="20dp" />
+            android:translationY="0dp" />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="92dp"
+        android:layout_height="73dp"
         android:orientation="horizontal">
 
         <Button
@@ -192,11 +196,11 @@
             android:layout_marginRight="200dp"
             android:layout_weight="1"
             android:background="@drawable/roundbutton"
-            android:scaleX="1.25"
-            android:scaleY="1.25"
+            android:scaleX="1"
+            android:scaleY="1"
             android:text="*"
             android:translationX="40dp"
-            android:translationY="20dp" />
+            android:translationY="0dp" />
 
         <Button
             android:id="@+id/numberZero"
@@ -205,12 +209,12 @@
             android:layout_weight="1"
             android:background="@drawable/roundbutton"
 
-            android:scaleX="1.25"
-            android:scaleY="1.25"
+            android:scaleX="1"
+            android:scaleY="1"
             android:text="0"
             android:translationX="-115dp"
 
-            android:translationY="20dp" />
+            android:translationY="0dp" />
 
         <Button
             android:id="@+id/hashKey_"
@@ -219,26 +223,26 @@
             android:layout_weight="1"
             android:background="@drawable/roundbutton"
 
-            android:scaleX="1.25"
-            android:scaleY="1.25"
+            android:scaleX="1"
+            android:scaleY="1"
             android:text="#"
             android:translationX="-80dp"
-            android:translationY="20dp" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="79dp"
-        android:orientation="horizontal">
+            android:translationY="0dp" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/callButton"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:clickable="true"
-            android:translationX="245dp"
+            android:translationX="-25dp"
             app:srcCompat="@android:drawable/sym_action_call" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="123dp"
+        android:orientation="horizontal">
 
     </LinearLayout>
 
